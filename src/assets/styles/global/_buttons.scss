@@ -1,0 +1,13 @@
+@import './mixins';
+@import './variables';
+
+.btn {
+    @include font( 13px,20px );
+    border-radius: $btn-border-radius;
+}
+
+.btn-primary {
+    @extend .btn;
+    color: $btn-text-primary-color;
+    background-color: $btn-bg-primary-color;
+}

@@ -7,3 +7,14 @@
 
     justify-content: $justify-content;
 }
+
+@mixin flexCenter($direction : row ){
+   @include flex();
+   justify-content:space-between;
+   align-items:center;
+}
+
+@mixin font( $size, $line-height ) {
+    font-size: $size;
+    line-height: $line-height;
+}

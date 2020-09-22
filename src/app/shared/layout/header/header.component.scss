@@ -1,0 +1,10 @@
+@import '../../../../assets/styles/global/_variables';
+@import '../../../../assets/styles/global/_mixins';
+
+header {
+    @include flexCenter();
+    height: 84px;
+    border-bottom: 1px solid $border-primary-color;
+    padding:0 49px 0 40px;
+}
+
