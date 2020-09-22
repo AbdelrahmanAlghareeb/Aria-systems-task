@@ -1,0 +1,9 @@
+@mixin flex($direction : row, $justify-content : space-between){
+    display:flex;
+    display:-webkit-flex;
+    
+    flex-direction: $direction;
+    -ms-flex-direction: $direction;
+
+    justify-content: $justify-content;
+}
