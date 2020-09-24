@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren : ()=> import('./modules/product-template/product-template.module').then(m=>m.ProductTemplateModule),
   },
   {
+    path:"",
+    pathMatch:"full",
+    redirectTo : "product-template"
+  },
+  {
     path:"*",
     redirectTo : "product-template"
   }

@@ -7,6 +7,10 @@ const routes: Routes = [
     component: ProductTemplateMainComponent,
     children : [
       {
+        path : '',
+        pathMatch:"full",
+        redirectTo:"step1"      },
+      {
         path : 'step1',
         component:ProductTemplateStep1Component
       },

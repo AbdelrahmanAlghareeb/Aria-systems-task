@@ -17,7 +17,6 @@ export class ProductTemplateMainComponent implements OnInit {
   ngOnInit(): void {
   }
   checkSteps(){
-    debugger
     let step:string = this.activatedRoute.snapshot
     .children[this.activatedRoute.snapshot.children.length-1]
     .routeConfig.path
