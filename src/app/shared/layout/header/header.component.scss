@@ -8,3 +8,17 @@ header {
     padding:0 49px 0 40px;
 }
 
+
+.left-header {
+  width: 163px;
+  @include flexCenter();
+}
+
+.right-header {
+  @include flexCenter();
+  &.border-left,.border-right{
+    padding: 0 13px;
+  }
+
+}
+

@@ -1,0 +1,81 @@
+@import './../../../../../assets/styles/global/variables';
+@import './../../../../../assets/styles/global/mixins';
+@import '../../../../../assets/styles/global/buttons';
+
+.step-line {
+  width: 202.5px;
+  height: 2px;
+  background-color: $border-primary-color;
+}
+h3 {
+  @include font(20px,29px);
+  font: normal normal normal 20px/29px Poppins;
+}
+.step-status {
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  border: 1px solid $border-secondary-color;
+}
+.done {
+  @include btn-icon-only(23px,transparent);
+  background-image: url('../../../../../assets/images/Group\ 117081.svg');
+}
+
+.steps-inner-container {
+  height: 66px;
+  @include flexStart();
+  width: 980px;
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+
+.step-line,
+.step-status,
+.step-name {
+  margin-right: 17.5px;
+}
+
+
+.step-details {
+  box-shadow: inset 0px 13px 66px #0000002C;
+  @include flexCenter();
+  background-color: #EBEDF5;
+  padding-top: 35px;
+  padding-bottom: 50px;
+}
+
+
+.right-section {
+  background-color: #fff;
+  .item-body {
+    .media-img-wrapper {
+      @include btn-icon-only(44px,transparent);
+      background-size: cover;
+      height: 70px;
+      background-image:url('../../../../../assets/images/Group\ 117176.svg');
+      .media-img {
+        @include btn-icon-only(44px,transparent);
+      }
+    }
+  }
+  div.item-body:nth-of-type(1) div.media-img-wrapper  {
+    background-size: cover;
+    background-image:url('../../../../../assets/images/Screen\ Shot\ 2020-08-17\ at\ 9.36.06\ PM.png')!important;
+  }
+  div.item-body:nth-of-type(2) div.media-img {
+    background-image:url('../../../../../assets/images/face-of-clown-with-hat.svg')!important;
+  }
+  div.item-body:nth-of-type(3) div.media-img {
+    background-image:url('../../../../../assets/images/font.svg')!important;
+  }
+
+}
+.order-items {
+  height: 258px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

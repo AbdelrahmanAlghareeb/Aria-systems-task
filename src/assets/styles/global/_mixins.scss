@@ -1,20 +1,52 @@
-@mixin flex($direction : row, $justify-content : space-between){
+@mixin flex( $direction : row, $justify-content : space-between, $vertical-align:center ){
     display:flex;
     display:-webkit-flex;
-    
+    align-items: $vertical-align;
     flex-direction: $direction;
     -ms-flex-direction: $direction;
-
     justify-content: $justify-content;
 }
 
 @mixin flexCenter($direction : row ){
-   @include flex();
-   justify-content:space-between;
-   align-items:center;
+   @include flex( $direction, space-between, center );
 }
+
+@mixin flexStart($direction : row ){
+  @include flex( $direction, flex-start, center);
+}
+
 
 @mixin font( $size, $line-height ) {
     font-size: $size;
     line-height: $line-height;
+}
+
+
+@mixin btn-icon-only ( $dimension, $bg-color: $btn-bg-primary-color ) {
+  width: $dimension;
+  height: $dimension;
+  @include bg-center-picture( $bg-color )
+}
+
+@mixin bg-center-picture( $bg-color : transparent ) {
+  background: $bg-color center center no-repeat;
+}
+
+
+@mixin arrow-down($width,$color) {
+  width: 0;
+  height: 0;
+  border-left: $width solid transparent;
+  border-right: $width solid transparent;
+  border-top: $width solid $color;
+}
+
+
+
+@mixin arrow-up($width,$color) {
+  width: 0;
+  height: 0;
+  border-left: $width solid transparent;
+  border-right: $width solid transparent;
+  border-bottom: $width solid $color;
 }

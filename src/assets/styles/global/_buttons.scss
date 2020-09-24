@@ -2,12 +2,24 @@
 @import './variables';
 
 .btn {
-    @include font( 13px,20px );
-    border-radius: $btn-border-radius;
+  @include font( 13px,20px );
+  border-radius: $btn-border-radius;
+  padding: 9px;
 }
 
 .btn-primary {
     @extend .btn;
     color: $btn-text-primary-color;
     background-color: $btn-bg-primary-color;
+}
+
+.btn-light {
+  @extend .btn;
+  background-color: $bg-primary-color;
+  box-shadow: 0px 1px 4px #00000029;
+  border-radius: 6px;
+}
+
+button:focus {
+  outline:none;
 }

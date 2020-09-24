@@ -3,42 +3,54 @@
 @import '../../../../../assets/styles/global/buttons';
 
 #search-container {
-    width: 806px;
-    height: 40px;
-        @include flexCenter();
 
-    .search-btn {    
-        background-color: $btn-bg-primary-color;
-        margin: 0;
-        height: 100%;
-        border-radius: 0px 6px 6px 0px;
-    }
-    
-    .category {
-        background-color: #EDEDED;
-        width: 136px;
-        height: 100%;
-        margin: 0;
-        @include flexCenter();
-        .down-arrow{
-            margin-left: 14.5px;
-        }
-        img,p{
-            @include flexCenter();
-        }
-    }
-    #search-control{
+    @include flexCenter();
+    #search-wrapper{
+      width: 806px;
+      height: 40px;
+      @include flexCenter();
+
+      #search-control{
         @include flexCenter();
         flex-grow: 1;
         height: 100%;
         margin: 0;
         background-color: #F3F6F9;
         box-shadow: none;
+        padding-left: 20px;
         &::placeholder{
-            color: #B5B5C3;
+          color: #B5B5C3;
         }
+      }
+
+      .category {
+        background-color: #EDEDED;
+        width: 136px;
+        height: 100%;
+        @include flex(row,space-evenly);
+        .down-arrow{
+          cursor: pointer;
+        }
+        img,p{
+          @include flexCenter();
+        }
+      }
+
+      .search-btn {
+        height: 100%;
+        border-radius: 0px 6px 6px 0px;
+        @include btn-icon-only(40px);
+        background-image: url('../../../../../assets/images/Search.svg');
+        cursor: pointer;
+      }
     }
-    
+
+    .save-search-btn {
+      @include btn-icon-only(40px,$bg-secondary-color);
+      margin-left: 28.5px;
+      background-image: url('../../../../../assets/images/Save\ search\ result.svg')
+    }
+
 }
 
 

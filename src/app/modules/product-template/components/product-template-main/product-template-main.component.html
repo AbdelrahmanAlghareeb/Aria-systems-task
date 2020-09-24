@@ -1,0 +1,106 @@
+<div class="container">
+  <div class="steps-inner-container border-bottom justify-content-start ">
+    <div *ngFor="let step of steps; let last = last;index as i" class="d-flex align-items-center">
+      <span class="step-status" [ngClass]="{ 'done' : step.status || currentStep >= i+1   }">  </span>
+      <a class="step-name" [routerLink]="['/product-template/step'+(i+1)]">{{step.name}}</a>
+      <span class="step-line" *ngIf="!last"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container step-details align-items-start">
+  <div class="d-flex left-section ">
+    <router-outlet (activate)='checkSteps($event)'></router-outlet>
+  </div>
+  <div class="d-flex right-section vc-list align-items-baseline ml-2">
+    <h3 class="m-0 p-2 pb-0 pb-1">Custom layers</h3>
+    <hr class="w-100">
+    <div class="order-items d-flex right-section vc-list align-items-baseline">
+      <div class="item-body align-items-center d-flex p-1">
+
+        <div class="media d-flex mr-1">
+          <div class="media-img-wrapper">
+            <div class="media-img">
+            </div>
+          </div>
+        </div>
+
+        <div class="media-body d-flex vc-list align-items-baseline">
+          <div class="info">
+            <p>Unisex Premium T-Shirt | Bella + Canvas 3001</p>
+            <p class="text-primary">$40</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <hr class="dashed-border w-100" >
+
+      <div class="item-body align-items-center d-flex p-1">
+
+        <div class="media d-flex mr-1">
+          <div class="media-img-wrapper">
+            <div class="media-img">
+            </div>
+          </div>
+        </div>
+
+        <div class="media-body d-flex vc-list align-items-baseline">
+
+          <div class="info">
+            <p>Clipart: Face Of Clown With Hat</p>
+            <p class="text-primary">$5</p>
+            <p >Qty:40</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <hr class="dashed-border w-100">
+
+      <div class="item-body align-items-center d-flex p-1">
+
+        <div class="media d-flex mr-1">
+          <div class="media-img-wrapper">
+            <div class="media-img">
+            </div>
+          </div>
+        </div>
+
+        <div class="media-body d-flex vc-list align-items-baseline">
+
+          <div class="info">
+            <p>Text: The Party tonight 2020</p>
+            <p class="text-primary">$3</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="w-100">
+
+    <div class="d-flex flex-column justiy-content-between w-100">
+      <div class="d-flex justify-content-between pl-2 pr-2">
+        <p class="d-flex">Subtotal</p>
+        <p class="d-flex text-primary"><b>$50</b></p>
+      </div>
+      <div class="d-flex justify-content-between pl-2 pr-2 pb-1 pt-1">
+        <p class="d-flex">Shipping amount</p>
+        <p class="d-flex text-primary"><b>$12</b></p>
+      </div>
+    </div>
+
+    <hr class="w-100">
+
+    <div class="d-flex flex-column justiy-content-between w-100 p-2">
+      <p class="d-flex">Total order</p>
+    </div>
+    <div class="text-center w-100 ">
+      <button class="btn-primary btn-lg-width">Add to cart</button>
+    </div>
+  </div>
+</div>
